@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    background-image: url(math2.jpeg);
+    background-size: auto;
+}
+p {
+    width: 50%;
+    margin: auto;
+}

@@ -1,0 +1,191 @@
+body {
+  background-color: #FFFFFF;
+}
+p {
+  color: black;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+#navbar {
+  background-color: #15B097;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  color: ghostwhite;
+  display: block;
+  text-align: center;
+}
+
+#getinshape1 {
+  font-family: 'Monoton', sans-serif;
+  font-size: 50px;
+  line-height: 15px;
+  text-align: center;
+}
+
+#getinshape2 {
+  font-family: 'Monoton', sans-serif;
+  font-size: 30px;
+  line-height: 0px;
+  text-align: center;
+}
+
+#getinshape3 {
+  font-family: 'Monoton', sans-serif;
+  font-size: 37px;
+  line-height: 25px;
+  text-align: center;
+}
+
+a.hover {
+  background-color: beige;
+}
+
+.get {
+  color: rgb(50,50,60);
+}
+
+hr {
+  border-style: solid;
+  border-width: thick;
+  margin: 0px;
+  padding: 0px;
+  color: #FFA69E;
+}
+
+#it {
+  background-color: #A5FFD6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin: auto;
+}
+
+#aboutp {
+  text-align: center;
+  font-family: 'Raleway', 'sans-serif';
+}
+
+.thanksul {
+  display: block;
+  font-family: 'Raleway','sans-serif';
+  width: 5%;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Raleway', 'sans-serif';
+}
+
+#about {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: lightpink;
+}
+
+#imgme {
+  width: 25%;
+}
+#thanks {
+  margin-left: 45%;
+}
+.content {
+  background-image: url(weights.jpg) ;
+  padding-top: 10px;
+  padding-bottom: 500px;
+  background-size: cover;
+}
+.innercontent {
+  background-color: lightgreen;
+  width: 50%;
+  margin: auto;
+  margin-top: 280px;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Quicksand', sans-serif;
+}
+.list {
+  text-align: center;
+  list-style-type: none;
+  font-style: normal;
+  padding: 0;
+}
+.s-head {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.incl {
+  margin-left: 20px;
+}
+#o-thanks {
+  background-color: lightgoldenrodyellow;
+  padding-top: 50px; 
+  padding-bottom:50px;;
+}
+.footer {
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.footer-text {
+  color: white;
+  font-family: 'Quicksand',sans-serif;
+}
+.f-link {
+  display: inline;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1050px) {
+  a {
+    display: inline;
+    margin-bottom: 10px;
+  }
+  
+  #home {
+    margin-left: 10%;
+  }
+
+  #home {
+    margin-left: 10%
+  }
+  
+  #bworkout {
+    margin-left: 10%;
+  }
+  
+  #iworkout {
+    margin-left: 10%;
+  }
+  
+  #aworkout {
+    margin-left: 10%;
+  }
+  
+}
+
+@media screen and (min-width: 500px) {
+  #getinshape1 {
+    font-size: 75px;
+  
+}
+}
+
+
+
+

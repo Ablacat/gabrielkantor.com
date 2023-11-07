@@ -1,0 +1,51 @@
+.body{
+    background-color: bisque;
+}
+.backdrop{
+    background-image: url(./lake.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0%;
+    left:0%;
+    animation: shrink 2s 1s forwards;
+}
+.center {
+    height:90%;
+    width: auto;
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: reveal 2s 2.5s forwards;
+}
+img{
+    width:auto;
+    height: 100%;
+    box-shadow: 10px 10px 75px;
+}
+@keyframes shrink {
+    0% {
+        width:100%;
+        height:100%;
+        top:0%;
+        left:0%;
+    }
+    100% {
+        width:45%;
+        height:90%;
+        top:5%;
+        left:27.5%;
+    }
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

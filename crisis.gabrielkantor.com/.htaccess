@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^crisis\.gabrielkantor\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.crisis\.gabrielkantor\.com$
+RewriteRule ^/?$ "https\:\/\/crisis\.gabrielkantor\.com\/Home\.html" [R=301,L]
+

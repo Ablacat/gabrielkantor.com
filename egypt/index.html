@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mathematics in Ancient Egypt</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <h1>Mathematics in Ancient Egypt</h1>
+            <h2> Your equation is:<br><span id="uno">Factor One</span> X <span id="dos">Factor Two</span></h2>
+            <p id="tres">Paragraph</p>
+            <h2> Your answer is:<br><span id="quatro">Answer</span></h2>
+        </div>
+        <script>
+            var numero = prompt("Please enter 1, 2 3, or 4. If you enter any other number this website will not work.");
+            if (numero == 1) {
+                var factorOne = 2;
+                var factorTwo = 5;
+                var paragraph = "The first step is to double the smallest factor (2) by 2 until the number it is multiplied by is the biggest number possible under or equal to the bigger factor (5), so 1 x 2 = 2, 2 x 2 = 4, 4 x 2 = 8. Then you add up the number you multiplied 2 by to get 5. in this case it would be, 4 + 1 = 5. Then you do it with the answers, 8 + 2 = 10. This means that 10 is the answer.";
+                var answer = 10;
+            } else if (numero == 2) {
+                var factorOne = 6;
+                var factorTwo = 9;
+                var paragraph = "The first step is to double the smallest factor (6) by 2 until the number it is multiplied by is the biggest number possible under or equal to the bigger factor (9), so 1 x 6 = 6, 2 x 6 = 12, 4 x 6 = 24, 8 x 6 = 48. Then you add up the number you multiplied 2 by to get 9. in this case it would be, 8 + 1 = 9. Then you do it with the answers, 48 + 6 = 54. This means that 54 is the answer.";
+                var answer = 54;
+            } else if (numero == 3) {
+                var factorOne = 12;
+                var factorTwo = 15;
+                var paragraph = "The first step is to double the smallest factor (12) by 2 until the number it is multiplied by is the biggest number possible under or equal to the bigger factor (16), so 1 x 12 = 12, 2 x 12 = 24, 4 x 12 = 48, 8 x 12 = 96. Then you add up the number you multiplied 2 by to get 15. in this case it would be, 8 + 4 + 2 + 1 = 15. Then you do it with the answers, 96 + 48 + 24 + 12 = 180. This means that 180 is the answer.";
+                var answer = 180;
+            } else if (numero == 4) {
+                var factorOne = 26;
+                var factorTwo = 72;
+                var paragraph = "The first step is to double the smallest factor (26) by 2 until the number it is multiplied by is the biggest number possible under or equal to the bigger factor (72), so 1 x 26 = 26, 2 x 26 = 52, 4 x 26 = 104, 8 x 26 = 208, 16 x 26 = 416, 32 x 26 = 832, 64 x 26 = 1664. Then you add up the number you multiplied 2 by to get 72. in this case it would be, 64 + 8 = 72. Then you do it with the answers, 1664 + 208 = 1872. This means that 1872 is the answer.";
+                var answer = 1872;
+            };
+            document.getElementById("uno").innerHTML = factorOne;
+            document.getElementById("dos").innerHTML = factorTwo;
+            document.getElementById("tres").innerHTML = paragraph;
+            document.getElementById("quatro").innerHTML = answer;
+            
+        </script>
+    </body>
+</html>
