@@ -2,11 +2,11 @@ body {
     background-color: #153131;
 }
 .box {
-    width: 75%;
+    width: 55%;
     height: 200px;
     position: absolute;
     top: 50%;
-    left: 12.5%;
+    left: 22.5%;
     transform: translateY(-50%);
 }
 .textBox {
@@ -43,10 +43,9 @@ body {
 h1 {
     width: 100%;
     text-align: center;
-    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-family: 'Roboto Flex', sans-serif;
     font-size: 130px;
     z-index: 5;
-    font-weight: 300;
     color: #0C1D1D;
     transform: translateY(-45%);
 }
@@ -65,18 +64,18 @@ h1 {
         width: 0%;
     }
     100% {
-        width: 75%;
+        width: 55%;
     }
 }
 @keyframes boxOut {
     0% {
         left: auto;
-        right: 12.5%;
-        width: 75%;
+        right: 22.5%;
+        width: 55%;
     }
     100% {
         left: auto;
-        right: 12.5%;
+        right: 22.5%;
         width: 0%;
         display: none;
     }
@@ -93,13 +92,13 @@ h1 {
 }
 h2{
     font-family: 'Roboto Mono', 'Courier New', monospace;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 55px;
     text-align: center;
 }
 a{
     font-family: 'Roboto Mono', 'Courier New', monospace;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 55px;
     text-align: center;
     width: fit-content;
