@@ -5,7 +5,7 @@ body {
     width: 55%;
     height: 200px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 22.5%;
     transform: translateY(-50%);
 }
@@ -20,11 +20,11 @@ body {
     border-width: 5px;
     border-image: conic-gradient(from var(--angle), #743ad5, #d53a9d, #EFCB68, #EFCB68, #d53a9d, #743ad5) 1;
     --angle: 0deg;
-    animation: display .1s 3s forwards, 10s rotate linear infinite, up 2s 7s forwards;
+    animation: display .1s 2s forwards, 10s rotate linear infinite, up 2s 4s forwards;
 }
 @keyframes up {
     0% {
-        top: 50%;
+        top: 45%;
     }
     100% {
         top: 25%;
@@ -52,12 +52,12 @@ h1 {
 .yellow {
     background-color: #EFCB68;
     width: 0px;
-    animation: boxIn 2s ease-in-out 1s forwards, boxOut 2s ease-in-out 4.25s forwards;
+    animation: boxIn 1s ease-in-out 1s forwards, boxOut 1s ease-in-out 2.75s forwards;
 }
 .black {
     background-color: #0C1D1D;
     width: 0px;
-    animation: boxIn 2s ease-in-out 1.25s forwards, boxOut 2s ease-in-out 4s forwards;
+    animation: boxIn 1s ease-in-out 1.25s forwards, boxOut 1s ease-in-out 2.5s forwards;
 }
 @keyframes boxIn {
     0% {
@@ -88,7 +88,7 @@ h1 {
     margin-bottom: 25px;
     transform: translateY(0);
     opacity: 0;
-    animation: display 1s 9s forwards;
+    animation: display 1s 6s forwards;
 }
 h2{
     font-family: 'Roboto Mono', 'Courier New', monospace;
