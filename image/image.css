@@ -2,20 +2,6 @@ body {
     background-color: #242933;
 }
 
-@media screen and (orientation: landscape) {
-    #p {
-        height: 80vh;
-        width: 80vh;
-    }
-}
-
-@media screen and (orientation: portrait) {
-    #p {
-        width: 80vw;
-        height: 80vw;
-    }
-}
-
 div {
     border-radius: 5%;
     display: grid;
@@ -62,4 +48,21 @@ p[active] {
 p:hover {
     color: #2e3440;
     background-color: #d8dee9;
+}
+
+@media screen and (orientation: landscape) {
+    #p {
+        height: 80vh;
+        width: 80vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #p {
+        width: 80vw;
+        height: 80vw;
+    }
+    .selectors {
+        top: 5%;
+    }
 }
