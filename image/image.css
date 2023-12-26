@@ -1,5 +1,9 @@
+*{ touch-action: none; } 
+
 body {
     background-color: #242933;
+    height: 100%;
+    overflow: hidden;
 }
 
 div {
