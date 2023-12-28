@@ -25,45 +25,50 @@ async function activate(id) {
     
     bgCanvas = await crop(imageURL, 1/1);
     let rgb = getAverageColor(bgCanvas, 0, 0, bgCanvas.width, bgCanvas.height);
-    document.getElementById("p").innerHTML = "";
-    document.getElementById("p").setAttribute("onmouseout", "getMouseEnter(this.id);");
-    document.getElementById("p").style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+    let p = document.getElementById("p");
+    p.innerHTML = "";
+    p.setAttribute("onmouseout", "getMouseEnter(this.id);");
+    p.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
 }
 
 async function split(id) {
     if (document.getElementById(id).getBoundingClientRect().width > Math.ceil(document.getElementById("p").offsetWidth / bgCanvas.width)) {
+        let idElement = document.getElementById(id);
         for (let i = 0; i < 4; i++){
             let div = document.createElement("div");
             div.setAttribute("id", id + "_" + i);
             div.setAttribute("onmouseout", "getMouseEnter(this.id);");
-            document.getElementById(id).appendChild(div);
+            idElement.appendChild(div);
             let rgb = await setAverageColor(document.getElementById(div.getAttribute("id")));
             document.getElementById(div.getAttribute("id")).style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
         }
-        document.getElementById(id).style.backgroundColor = "transparent";
-        document.getElementById(id).removeAttribute("onmouseenter");
+        idElement.style.backgroundColor = "transparent";
+        idElement.removeAttribute("onmouseenter");
     }
 }
 
 function getMouseEnter(id) {
-    document.getElementById(id).setAttribute("onmouseenter", "split(this.id);");
-    document.getElementById(id).removeAttribute("onmouseout");
+    let idElement = document.getElementById(id);
+    idElement.setAttribute("onmouseenter", "split(this.id);");
+    idElement.removeAttribute("onmouseout");
 }
 
 async function setAverageColor(div) {
-    let x = (div.getBoundingClientRect().left - document.getElementById("p").getBoundingClientRect().left) 
-    / (document.getElementById("p").offsetWidth / bgCanvas.width);
+    let p = document.getElementById("p");
 
-    let y = (div.getBoundingClientRect().top - document.getElementById("p").getBoundingClientRect().top)
-    / (document.getElementById("p").offsetHeight / bgCanvas.height);
+    let x = (div.getBoundingClientRect().left - p.getBoundingClientRect().left) 
+    / (p.offsetWidth / bgCanvas.width);
 
-    let preWidth = bgCanvas.width * (div.getBoundingClientRect().width / document.getElementById("p").offsetWidth);
-    let relWidth = (preWidth > Math.ceil(document.getElementById("p").offsetWidth / bgCanvas.width)) 
-    ? preWidth : Math.ceil(document.getElementById("p").offsetWidth / bgCanvas.width);
+    let y = (div.getBoundingClientRect().top - p.getBoundingClientRect().top)
+    / (p.offsetHeight / bgCanvas.height);
 
-    let preHeight = bgCanvas.height * (div.getBoundingClientRect().height / document.getElementById("p").offsetHeight);
-    let relHeight = (preHeight > Math.ceil(document.getElementById("p").offsetHeight / bgCanvas.height)) 
-    ? preHeight : Math.ceil(document.getElementById("p").offsetHeight / bgCanvas.height);
+    let preWidth = bgCanvas.width * (div.getBoundingClientRect().width / p.offsetWidth);
+    let relWidth = (preWidth > Math.ceil(p.offsetWidth / bgCanvas.width)) 
+    ? preWidth : Math.ceil(p.offsetWidth / bgCanvas.width);
+
+    let preHeight = bgCanvas.height * (div.getBoundingClientRect().height / p.offsetHeight);
+    let relHeight = (preHeight > Math.ceil(p.offsetHeight / bgCanvas.height)) 
+    ? preHeight : Math.ceil(p.offsetHeight / bgCanvas.height);
 
     let rgb = getAverageColor(bgCanvas, x, y, relWidth, relHeight);
     return rgb;
