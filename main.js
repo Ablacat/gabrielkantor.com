@@ -12,7 +12,7 @@ document.getElementById("projects").onmousemove = e => {
     document.querySelectorAll(".card").forEach(card => {
         card.onmousemove = m => {
             const rect = card.getBoundingClientRect(),
-            xDeg = (e.clientX - rect.left - rect.width / 2) / 100;
+            xDeg = (e.clientX - rect.left - rect.width / 2) / 100,
             yDeg = -(e.clientY - rect.top - rect.height / 2) / 100;
 
             card.style.setProperty("--deg-x", xDeg + 'deg');

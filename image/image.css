@@ -27,7 +27,8 @@ div {
     transform: translateX(-50%);
     width: auto;
     height: 10%;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     grid-template-columns: 175px 175px;
     justify-content: space-evenly;
     align-content: space-evenly;

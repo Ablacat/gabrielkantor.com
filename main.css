@@ -24,9 +24,11 @@ body {
     border: 5px solid;
     box-sizing: border-box;
     border-image-slice: 1;
-    border-image: conic-gradient(from var(--angle), #743ad5, #d53a9d, #EFCB68, #EFCB68, #d53a9d, #743ad5) 1;
+    -o-border-image: conic-gradient(from var(--angle), #743ad5, #d53a9d, #EFCB68, #EFCB68, #d53a9d, #743ad5) 1;
+       border-image: conic-gradient(from var(--angle), #743ad5, #d53a9d, #EFCB68, #EFCB68, #d53a9d, #743ad5) 1;
     --angle: 0deg;
-    animation: display .1s 2s forwards, 10s rotate linear infinite, up 2s 4s forwards;
+    -webkit-animation: display .1s 2s forwards, 10s rotate linear infinite, up 2s 4s forwards;
+            animation: display .1s 2s forwards, 10s rotate linear infinite, up 2s 4s forwards;
     display: grid;
     align-content: center;
 }
@@ -43,13 +45,15 @@ h1 {
 .yellow {
     background-color: #EFCB68;
     width: 0px;
-    animation: boxIn 1s ease-in-out 1s forwards, boxOut 1s ease-in-out 2.75s forwards;
+    -webkit-animation: boxIn 1s ease-in-out 1s forwards, boxOut 1s ease-in-out 2.75s forwards;
+            animation: boxIn 1s ease-in-out 1s forwards, boxOut 1s ease-in-out 2.75s forwards;
 }
 
 .black {
     background-color: #2e3440;
     width: 0px;
-    animation: boxIn 1s ease-in-out 1.25s forwards, boxOut 1s ease-in-out 2.5s forwards;
+    -webkit-animation: boxIn 1s ease-in-out 1.25s forwards, boxOut 1s ease-in-out 2.5s forwards;
+            animation: boxIn 1s ease-in-out 1.25s forwards, boxOut 1s ease-in-out 2.5s forwards;
 }
 
 #projects {
@@ -66,7 +70,8 @@ h1 {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    animation: display 1s 6s forwards;
+    -webkit-animation: display 1s 6s forwards;
+            animation: display 1s 6s forwards;
 }
 
 #projects:hover > .card::after {
@@ -151,6 +156,16 @@ span {
     left: 10px;
 }
 
+@-webkit-keyframes boxIn {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60vw;
+    }
+}
+
 @keyframes boxIn {
     0% {
         width: 0;
@@ -158,6 +173,21 @@ span {
 
     100% {
         width: 60vw;
+    }
+}
+
+@-webkit-keyframes boxOut {
+    0% {
+        left: auto;
+        right: 20vw;
+        width: 60vw;
+    }
+
+    100% {
+        left: auto;
+        right: 20vw;
+        width: 0;
+        display: none;
     }
 }
 
@@ -176,6 +206,16 @@ span {
     }
 }
 
+@-webkit-keyframes up {
+    0% {
+        top: 50vh;
+    }
+
+    100% {
+        top: 20vh;
+    }
+}
+
 @keyframes up {
     0% {
         top: 50vh;
@@ -183,6 +223,16 @@ span {
 
     100% {
         top: 20vh;
+    }
+}
+
+@-webkit-keyframes display {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -200,6 +250,12 @@ span {
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
+}
+
+@-webkit-keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
 }
 
 @keyframes rotate {
