@@ -1,4 +1,4 @@
-let imageURL = "image/banana.jpg";
+let imageURL = "banana.jpg";
 
 let bgCanvas;
 
@@ -16,10 +16,10 @@ async function activate(id) {
     document.getElementById(id).setAttribute("active", "");
     switch (id) {
         case ("qr"):
-            imageURL = "image/qr.jpg"
+            imageURL = "qr.jpg"
             break;
         case ("banana"):
-            imageURL = "image/banana.jpg"
+            imageURL = "banana.jpg"
             break;
     }
     
